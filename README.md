@@ -1,5 +1,9 @@
 # KPMS Demo Application
 
+![Login](images/login.png)
+![Sign Up](images/signup.png)
+![Profile](demo_assets/profile.png)
+
 This repository contains a demo application for the KPMS (Key Performance Management System) with features including user authentication, login, signup, and profile management. The application utilizes Firebase Authentication for user authentication.
 
 ## Features

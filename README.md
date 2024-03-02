@@ -1,16 +1,25 @@
-# kpms
+# KPMS Demo Application
 
-A new Flutter project.
+This repository contains a demo application for the KPMS (Key Performance Management System) with features including user authentication, login, signup, and profile management. The application utilizes Firebase Authentication for user authentication.
+
+## Features
+
+- User authentication using Firebase Auth
+- Login functionality
+- Signup functionality
+- Profile management
+
+## Technologies Used
+
+- Firebase Authentication
+- HTML/CSS/JavaScript (Frontend)
+- [Insert any additional technologies/frameworks used]
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with the KPMS Demo Application, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone this repository to your local machine:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/your-username/kpms-demo.git

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479077859255",
+    "project_id": "kpms-3bfd3",
+    "storage_bucket": "kpms-3bfd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479077859255:android:09d454d28f2da64563b232",
+        "android_client_info": {
+          "package_name": "com.example.kpms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkxuzr7F08nUy8lsT4xfKdhjaqgfCdggs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

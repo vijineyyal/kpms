@@ -26,7 +26,7 @@ class AuthenticationController extends GetxController {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       return true;
     } on FirebaseAuthException catch (firebaseError) {
-      throw firebaseError.message.toString();
+      throw handleNetworkError(firebaseError.message.toString());
     } catch (e) {
       throw "Something went wrong";
     }
@@ -41,7 +41,7 @@ class AuthenticationController extends GetxController {
 
       return true;
     } on FirebaseAuthException catch (firebaseError) {
-      throw firebaseError.message.toString();
+      throw handleNetworkError(firebaseError.message.toString());
     } catch (e) {
       throw "Something went wrong";
     }
@@ -53,7 +53,7 @@ class AuthenticationController extends GetxController {
 
       return true;
     } on FirebaseAuthException catch (firebaseError) {
-      throw firebaseError.message.toString();
+      throw handleNetworkError(firebaseError.message.toString());
     } catch (e) {
       throw "Something went wrong";
     }
@@ -67,7 +67,7 @@ class AuthenticationController extends GetxController {
       });
       return true;
     } on FirebaseAuthException catch (firebaseError) {
-      throw firebaseError.message.toString();
+      throw handleNetworkError(firebaseError.message.toString());
     } catch (e) {
       throw "Something went wrong";
     }
@@ -82,7 +82,7 @@ class AuthenticationController extends GetxController {
 
       return downloadURL;
     } on FirebaseAuthException catch (firebaseError) {
-      throw firebaseError.message.toString();
+      throw handleNetworkError(firebaseError.message.toString());
     } catch (e) {
       throw "Something went wrong";
     }
@@ -104,7 +104,8 @@ class AuthenticationController extends GetxController {
         return uploadPath;
       } on FirebaseAuthException catch (firebaseError) {
         loader.hide();
-        throw firebaseError.message.toString();
+
+        throw handleNetworkError(firebaseError.message.toString());
       } catch (e) {
         loader.hide();
         throw "Something went wrong";
@@ -114,5 +115,13 @@ class AuthenticationController extends GetxController {
 
   signOut() {
     _auth.signOut();
+  }
+
+  String handleNetworkError(String firebaseErrorString) {
+    if (firebaseErrorString.contains("network error")) {
+      return "Network Error. Please check Your connection";
+    } else {
+      return firebaseErrorString;
+    }
   }
 }

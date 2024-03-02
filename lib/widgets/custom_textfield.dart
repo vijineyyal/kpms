@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({super.key, required this.controller, required this.label, this.hintText, this.isObscureText = false, this.needObscureToggle = true, this.isEnabled = true,this.textInputType});
+  const CustomTextField({super.key, required this.controller, required this.label, this.hintText, this.isObscureText = false, this.needObscureToggle = true, this.isEnabled = true, this.textInputType});
   final String label;
   final TextEditingController controller;
   final String? hintText;
@@ -32,7 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: const Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3),
             ),
           ],
         ),
@@ -47,9 +47,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 widget.label,
                 style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              // SizedBox(
-              //   height: 4,
-              // ),
               TextField(
                 controller: widget.controller,
                 obscureText: isObscure,
@@ -59,7 +56,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 decoration: InputDecoration(
                   hintText: widget.hintText ?? "",
                   border: InputBorder.none,
-
                   suffixIcon: widget.isObscureText && widget.needObscureToggle
                       ? IconButton(
                           icon: Icon(
@@ -73,7 +69,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           },
                         )
                       : null,
-                  // border: OutlineInputBorder(),
                 ),
               ),
             ],
